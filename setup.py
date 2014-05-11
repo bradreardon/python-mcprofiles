@@ -1,3 +1,7 @@
+# Fixing issue with hard links not being supported on some filesystems, causing sdist to fail.
+import os
+del os.link
+
 from distutils.core import setup
 
 setup(
